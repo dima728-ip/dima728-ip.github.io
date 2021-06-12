@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n5-active wf-active"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homework</title>
+<link rel="stylesheet"  media="all"><link rel="stylesheet" media="all"><style data-styled="" data-styled-version="4.3.2"></style><script data-avast-pam="y" type="text/javascript" name="AVAST_PAM_submitInjector">(function _submitInjector() {
+      var f = document.querySelectorAll("form")[0]; // eslint-disable-line no-undef
+
+      if (!f._avast_submit) {
+        f._avast_submit = f.submit;
+      }
+
+      try {
+        Object.defineProperty(f, "submit", {
+          get() {
+            return function (prev_submit) {
+              prev_submit.call(this);
+
+              if (this._avast_inside_submit) {
+                return;
+              }
+
+              this._avast_inside_submit = true;
+              var evt = document.createEvent("CustomEvent");
+              evt.initEvent("scriptsubmit", true, true); // bubbling & cancelable
+
+              this.dispatchEvent(evt);
+              delete this._avast_inside_submit;
+            }.bind(this, this._avast_submit);
+          },
+
+          set(submitFunc) {
+            this._avast_submit = submitFunc;
+          }
+
+        });
+      } catch (ex) {// ignored
+      }
+    })();</script></head>
+<body>
+    <h1>Загадка!</h1>
+    <h5 style="display: none">НАСТОЯЩИЙ ОТВЕТ: ИЩИ В ОДНОМ ИЗ ДИВОВ</h5>
+    <mark>Я зашифровал слово, попробуй его расшифровать! А также попробуй создать точно такую же страничку =)</mark>
+
+    <div>
+        <h2>жявягйябдйя</h2>
+        <form action="" id="quizForm">
+            <input type="text">
+            <input type="submit" value="Ответ" id="secret">
+        </form>
+        <p id="answer">Неа, попробуй еще разок ⛔</p>
+        <!-- ОТВЕТ: 12345 -->
+    </div>
+    <div>
+        <strong>Подсказка: </strong>
+        <small>Шифр был придуман древнеримским <i>Диктатором!</i></small>
+    </div>
+
+
+
+<script>
+
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    var x = document.getElementById("quizForm");
+    const answ = x.elements[0].value;
+    if (answ === 'загадкавека') {
+        const text = 'Поздравляю это верный ответ! Настоящий шифр = 999 &#9989; Но это не точно... попробуй F12'
+        document.getElementById("answer").innerHTML = text;
+    } else {
+        const text = 'Неа, попробуй еще разок &#9940;'
+        document.getElementById("answer").innerHTML = text;        
+    }
+});
+
+</script>
+</body><div class="notranslate" style="position: absolute; top: 0; right:0;" id="vd-root-d19608294"></div></html>
